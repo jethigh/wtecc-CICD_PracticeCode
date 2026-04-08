@@ -16,3 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     # Lets run container on runner
     container: python:3.9-slim
+    # Define steps
+    steps:
+      - name: Checkout
+        # This one uses action
+        uses: actions/checkout@v3
+      - name: Show working folder
+        run: pwd
+      - name: List files in workdir
+        run: ls -ltra
+          
