@@ -1,0 +1,18 @@
+# Define a name for workflow
+name: CI workflow
+
+# Define an event and branches 
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches:
+      - "main"
+
+# Define jobs
+jobs:
+  build:
+    # Define a runner for job
+    runs-on: ubuntu-latest
+    # Lets run container on runner
+    container: python:3.9-slim
